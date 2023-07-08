@@ -18,7 +18,7 @@ def do_pack():
     if result.return_code == 0:
         location = os.path.join(full_path, archived_file)
         size = os.path.getsize(location)
-        print('web_static packed: versions/{} -> {}Bytes'.format(archived_file,
-                                                                 size))
+        # print('web_static packed: versions/{} -> {}Bytes'.format(archived_file,
+        #                                                          size))
     else:
         print(None)
