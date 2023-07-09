@@ -22,5 +22,3 @@ def do_pack():
                                                                  size))
     else:
         return None
-    
-# return execute(do_pack)
