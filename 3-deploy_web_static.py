@@ -6,6 +6,7 @@ from fabric.api import put, local, env, run
 
 env.hosts = ['54.160.79.143', '18.233.65.33']
 
+
 def do_pack():
     """pack the files"""
     date = datetime.now().strftime('%Y%m%d%H%M%S')
