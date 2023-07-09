@@ -13,7 +13,7 @@ def do_pack():
     if not os.path.isdir('versions'):
         os.makedirs(full_path)
     archd_file = 'web_static_{}.tgz'.format(date)
-    cmd = 'tar -cvzf versions/{} web_static/*'.format(archd_file)
+    cmd = 'tar -cvzf versions/{} web_static'.format(archd_file)
     result = local('{}'.format(cmd))
     if result.return_code == 0:
         location = os.path.join(full_path, archd_file)
