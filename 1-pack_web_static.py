@@ -20,5 +20,6 @@ def do_pack():
         size = os.path.getsize(location)
         print('web_static packed: versions/{} -> {}Bytes'.format(archd_file,
                                                                  size))
+        return 'versions/{}'.format(archd_file)
     else:
         return None

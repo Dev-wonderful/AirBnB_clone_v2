@@ -16,11 +16,24 @@ def do_deploy(archive_path):
     # the destination path where the unzipped dir would be saved
     path = '/data/web_static/releases'
     # process your archive in the remote machine
-    put(archive_path, '/tmp/')
-    run('mkdir -p {}/{}'.format(path, archive_name))
-    run('tar -xzf /tmp/{1}.tgz -C {0}/{1}/'.format(path, archive_name))
-    run('rm /tmp/{}.tgz'.format(archive_name))
-    run('mv {0}/{1}/web_static/* {0}/{1}/'.format(path, archive_name))
-    run('rm -rf {}/{}/web_static'.format(path, archive_name))
-    run('rm -rf /data/web_static/current')
-    run('ln -s {}/{}/ /data/web_static/current'.format(path, archive_name))
+    if put(archive_path, '/tmp/').failed:
+        return False
+    if run('mkdir -p {}/{}'.format(path, archive_name)).failed:
+        return False
+    if run('tar -xzf /tmp/{1}.tgz -C {0}/{1}/'.format(path, 
+                                                      archive_name)).failed:
+        return False
+    if run('rm /tmp/{}.tgz'.format(archive_name)).failed:
+        return False
+    if run('mv {0}/{1}/web_static/* {0}/{1}/'.format(path, 
+                                                     archive_name)).failed:
+        return False
+    if run('rm -rf {}/{}/web_static'.format(path, archive_name)).failed:
+        return False
+    if run('rm -rf /data/web_static/current').failed:
+        return False
+    if run('ln -s {}/{}/ /data/web_static/current'
+           .format(path, archive_name)).failed:
+        return False
+    
+    return True
