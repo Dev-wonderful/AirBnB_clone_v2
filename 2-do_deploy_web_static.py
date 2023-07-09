@@ -5,6 +5,7 @@ from fabric.api import run, put, env
 
 env.hosts = ['54.160.79.143', '18.233.65.33']
 
+
 def do_deploy(archive_path):
     """deploy zipped web_static version"""
 
