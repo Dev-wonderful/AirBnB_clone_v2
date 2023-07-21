@@ -8,3 +8,7 @@ app = Flask(__name__)
 def hello_world():
     """Default route"""
     return "Hello HBNB!"
+
+
+if __name__ == '__main__':
+    app.run('localhost')
