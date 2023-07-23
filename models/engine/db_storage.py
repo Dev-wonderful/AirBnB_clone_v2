@@ -41,16 +41,17 @@ class DBStorage:
         }
 
         def get_all(cls_f):
-            cls_objs = self.__session.query(classes[cls_f])
+            cls_objs = self.__session.query(cls_f)
             for objs in cls_objs:
-                key = f'{cls_f}.{objs.id}'
+                key = f'{cls_f.__name__}.{objs.id}'
                 all_objs[key] = objs
         if cls:
             if isinstance(cls, str):
-                get_all(cls)
+                get_all(classes[cls])
+            get_all(cls)
         else:
             for cls_str, cls_type in classes.items():
-                get_all(cls_str)
+                get_all(classes[cls_str])
 
         return all_objs
 
