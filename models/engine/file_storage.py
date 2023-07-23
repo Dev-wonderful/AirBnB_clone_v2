@@ -63,5 +63,5 @@ class FileStorage:
             del self.__objects[obj_key]
 
     def close(self):
-        """close connection"""
+        """reloads from file, thereby creating new session objects"""
         self.reload()

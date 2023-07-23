@@ -5,6 +5,12 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ad30d032-53ac-412c-8415-a4163d004cdf">
       <console name="Airbnb_v2" type="STANDARD" schema="mysql" session="Main" />
@@ -15,6 +21,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="ad30d032-53ac-412c-8415-a4163d004cdf" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -28,7 +37,7 @@
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
     <recently-used-interfaces>
-      <mapping database-type="MYSQL" interface-id="8083547b-48c1-4df3-bd9d-193acfa42d04" />
+      <mapping database-type="MYSQL" interface-id="5cb7b32d-291e-411a-8ce6-56c70e2a1bb4" />
     </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
@@ -49,9 +58,9 @@
           <database value="mysql" />
           <tns-folder value="" />
           <tns-profile value="" />
-          <type value="USER" />
-          <user value="root" />
-          <deprecated-pwd value="" />
+          <type value="USER_PASSWORD" />
+          <user value="pycharm" />
+          <deprecated-pwd value="cHljaGFybQ==" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -435,6 +444,7 @@
       <script-execution>
         <command-line-interfaces>
           <value id="8083547b-48c1-4df3-bd9d-193acfa42d04" name="MySQL client" executable-path="$PROJECT_DIR$/../../../../xampp/mysql/bin/mysql.exe" database-type="MYSQL" />
+          <value id="5cb7b32d-291e-411a-8ce6-56c70e2a1bb4" name="MySQL client(2)" executable-path="$PROJECT_DIR$/../../../../new/xampp/mysql/bin/mysql.exe" database-type="MYSQL" />
         </command-line-interfaces>
         <execution-timeout value="300" />
       </script-execution>
