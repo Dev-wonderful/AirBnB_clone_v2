@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module is usedd to connected to MySQL Using SQLAlchemy"""
+"""This module is used to connected to MySQL Using SQLAlchemy"""
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -74,3 +74,7 @@ class DBStorage:
                                        expire_on_commit=False)
         Session = scoped_session(session_factory)
         self.__session = Session()
+
+    def close(self):
+        """close session"""
+        self.__session.remove
