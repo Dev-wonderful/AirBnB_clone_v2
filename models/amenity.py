@@ -2,8 +2,6 @@
 """ Amenity Module for HBNB project """
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
-from sqlalchemy.orm import Relationship
-from models.place import place_amenity
 
 
 class Amenity(BaseModel, Base):
