@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module is used to connected to MySQL Using SQLAlchemy"""
+"""This module is used to connect to MySQL Using SQLAlchemy"""
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
