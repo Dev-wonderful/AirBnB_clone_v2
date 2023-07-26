@@ -11,12 +11,15 @@ app = Flask(__name__)
 def states_list():
     """list all states"""
     states = storage.all(State).values()
+    print(states)
     return render_template('7-states_list.html', states=states)
 
 
 @app.teardown_appcontext
-def end_session():
+def end_session(error=None):
     """close the session"""
+    if error is not None:
+        print(f'Error Occurred during Teardown: {error}')
     storage.close()
 
 
