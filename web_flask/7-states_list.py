@@ -18,8 +18,6 @@ def states_list():
 @app.teardown_appcontext
 def end_session(error=None):
     """close the session"""
-    if error is not None:
-        print(f'Error Occurred during Teardown: {error}')
     storage.close()
 
 
